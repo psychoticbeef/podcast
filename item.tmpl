@@ -1,0 +1,11 @@
+    <item>
+      <title><?php echo $this->content["author"];?> - <?php echo $this->content["title"];?></title>
+      <itunes:author><?php echo $this->content["author"];?></itunes:author>
+      <itunes:subtitle><?php echo $this->content["subtitle"];?></itunes:subtitle>
+      <itunes:summary></itunes:summary>
+      <enclosure url="<?php echo $this->content["url"];?>" length="<?php echo $this->content["filesize"];?>" type="audio/mpeg" />
+      <guid><?php echo $this->content["url"];?></guid>
+      <pubDate><?php echo date(DateTime::RFC2822, $this->content["timestamp"]);?></pubDate>
+      <itunes:duration><?php echo $this->content["duration"];?></itunes:duration>
+    </item>
+
